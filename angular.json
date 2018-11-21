@@ -129,6 +129,76 @@
           }
         }
       }
+    },
+    "perfect": {
+      "root": "projects/perfect",
+      "sourceRoot": "projects/perfect/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/perfect/tsconfig.lib.json",
+            "project": "projects/perfect/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/perfect/src/test.ts",
+            "tsConfig": "projects/perfect/tsconfig.spec.json",
+            "karmaConfig": "projects/perfect/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/perfect/tsconfig.lib.json",
+              "projects/perfect/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "perfectngpro": {
+      "root": "projects/perfectngpro",
+      "sourceRoot": "projects/perfectngpro/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/perfectngpro/tsconfig.lib.json",
+            "project": "projects/perfectngpro/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/perfectngpro/src/test.ts",
+            "tsConfig": "projects/perfectngpro/tsconfig.spec.json",
+            "karmaConfig": "projects/perfectngpro/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/perfectngpro/tsconfig.lib.json",
+              "projects/perfectngpro/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "storepro"
