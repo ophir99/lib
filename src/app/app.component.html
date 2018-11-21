@@ -8,3 +8,23 @@
 </ul>
 
 <lib-perfect></lib-perfect>
+<ul>
+  <li *ngFor="let x of array">
+    {{ x.title }} <button (click)="edit(x._id)">Edit</button>
+    <button (click)="delete(x._id)">Delete</button>
+  </li>
+</ul>
+
+<table [formGroup]="tweetForm">
+  <tbody>
+    <tr>
+      <td><input type="text" formControlName="title" /></td>
+    </tr>
+    <tr>
+      <td><input type="text" formControlName="text" /></td>
+    </tr>
+    <tr>
+      <td><button (click)="addTweet()">Post</button></td>
+    </tr>
+  </tbody>
+</table>
